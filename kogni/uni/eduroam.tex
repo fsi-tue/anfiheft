@@ -1,0 +1,40 @@
+Eduroam ermöglicht es euch, europaweit an verschiedenen teilnehmenden
+Universitäten\footnote{Deutschland-Karte:
+\url{https://map.eduroam.de/leaflet/eduroam/eduroam-map.html}} die Zugangsdaten
+deiner eigenen Uni zu benutzen, um ins Internet zu kommen. Dass eine Uni oder
+FH bei Eduroam mitmacht, bekommt ihr i.\,d.\,R. relativ schnell mit, sobald ihr
+euer Smartphone in die Hand nehmt.
+
+\vfill
+
+\subsection*{Zertifikat}
+  Um zu verhindern, dass jemand irgendwo ein WLAN-Netz mit dem Namen eduroam
+  eröffnet und eure Daten abgreift, müsst ihr unbedingt das Zertifikat
+  überprüfen\footnote{Genau genommen prüfen wir den Zertifizierungspfad mit dem
+  Wurzelzertifikat der Deutschen Telekom.}. Dieser Schritt ist leider etwas
+  umständlich, sollte aber auf keinen Fall weggelassen werden! Ihr braucht dazu das Wurzelzertifikat \glqq\texttt{T-Telesec Global Root Class 2}\grqq. Dies
+  sollte schon vorhanden sein (v.\,a. unter GNU/Linux und Windows), kann
+  jedoch unter Android nicht für W-LAN verwendet werden. Außerdem ist unter iOS
+  und OS X laut ZDV eine manuelle Konfiguration nicht möglich, es muss also das
+  Konfigurationsprofil vom ZDV verwendet werden
+  \footnote{\url{http://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/Einrichtungen/ZDV/Dokumente/Anleitungen/eduroam/eduroam-uni-tuebingen.mobileconfig}},
+  welches das Zertifikat bereits beinhaltet.
+
+\subsection*{Konfiguration}
+  Am besten folgt man einer der ausführlichen und plattformspezifischen
+  Anleitungen vom ZDV:
+  \url{https://uni-tuebingen.de/de/13958}.\\
+  Als fortgeschrittene Variante kann man unter GNU/Linux \texttt{netctl} oder auch
+  direkt \texttt{wpa\_supplicant} verwenden. Anleitungen dazu findet man auf der
+  fsi-Website (\url{https://www.fsi.uni-tuebingen.de/studium/tipps/eduroam}).
+
+\subsection*{Authentifizierung}
+  Um zu gewährleisten, dass der Zugang überall funktioniert, muss man sich an
+  folgende Konvention halten (bitte beachtet, dass hier kein
+  \emph{@student.uni-tuebingen.de} verwendet werden darf): \medskip \\
+  \begin{tabular}{l|l}
+    Benutzername (Identität) & <zx-Kürzel>@uni-tuebingen.de \\ \hline
+    Passwort                 & <ZDV-Passwort>
+  \end{tabular}
+
+\vfill

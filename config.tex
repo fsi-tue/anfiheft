@@ -1,0 +1,23 @@
+\input{makeconfig.tex}
+
+\newcommand{\Ticketpreis}{\EUR{99,70}}
+
+\wintersemestertrue
+%\sommersemestertrue
+
+%\jahr=2018
+
+%\infotrue
+
+%\auflage=30
+
+\ifinfo
+	\newcommand{\Infoprof}{Grust}
+	\newcommand{\Matheprof}{Hein}
+	\newcommand{\Studiendekan}{Nieselt}
+\else
+	\newcommand{\studBeratung}{Lia Schmid und Paul Fischer}
+	\newcommand{\studBeratungTwolines}{Lia Schmid und \newline Paul Fischer}
+	\newcommand{\kognimentoren}{Theresa Horn und Fabienne Uehlin}
+	\newcommand{\kognimentorenTwolines}{Theresa Horn und \newline Fabienne Ühlin}
+\fi

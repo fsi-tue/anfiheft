@@ -1,0 +1,36 @@
+\begin{titlepage}
+	\thispagestyle{empty}
+	{\sf \number\auflage. Auf\/lage \hfill Tübingen, 
+		\ifwintersemester
+		Oktober \number\jahr}\\
+	\fi
+	\ifsommersemester
+	April \number\jahr}\\
+	\fi 
+	\vspace*{2cm}
+	%\rule[2mm]{\textwidth}{.2cm}\\
+	\includegraphics[width=\textwidth]{info/logos/fsilogo_neu}
+	%\rule{\textwidth}{0.2cm}\\
+	
+	\begin{center}
+		\vspace*{1.5cm}
+		\oldbaselineskp=\baselineskip
+		\baselineskip 45pt
+		
+		\Huge Informationen für Studienanfänger\\[2cm]
+		
+		\ifwintersemester
+		Wintersemester \number\jahr /\number\jahrpluseins
+		\fi
+		\ifsommersemester
+		Sommersemester \number\jahr
+		\fi
+		\\
+		
+		\baselineskip=\oldbaselineskp
+		\vfill
+		\includegraphics[width=9cm]{info/logos/unilogo_neu}
+		%\uni H \rm ~~~ \raisebox{18pt}{\Huge Universität Tübingen}\\[2cm]
+	\end{center}
+	\eject
+\end{titlepage}

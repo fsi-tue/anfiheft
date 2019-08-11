@@ -1,0 +1,132 @@
+% unilogo.mf: Logo fuer Universit"at T"ubingen
+%	      designed by franz.koch@zdv.uni-tuebingen.de
+mode_setup;
+% em#:=160pt#; cap#:=108pt#; % alles 16-fach so gross; cap=cap-4pt# !
+% jetzt noch alles mal 1.842;  entspr. 4*sqrt(2) mal dem Original
+%  em#:=236pt#; cap#:=199pt#;
+%    in em wird Faktor 0.8 in beginchar noch
+%    beruecksichtigt ; vorher 295 --> 295*0.8 = 236
+% gebraucht wird aber fuer Kreis das Verhaeltnis .5w = .4h !!!!
+%
+% em#:=236pt#;         %  cap#:=199pt#;
+% .4em# = .5cap#;      % also cap# = 189pt#
+% voriges o von weiter unten:
+%%  o#:=5.9pt#;
+%
+% em#:=241pt#;
+% cap#:=200pt#;
+% um sqrt(2)*4 = 5.6568... verkleinert:
+%
+% designsize festlegen! koaunghi.un@zdv.uni-tuebingen.de
+designsize:=10pt#;
+
+ em#:=42.6pt#;
+ cap#:=37pt#; % vorher 35.36pt
+% o#:=16/5pt#;  % vorher 1/5
+ o#:=1pt#;
+define_pixels(em,cap);
+define_corrected_pixels(o);
+% curve_sidebar=round 1/18em;
+
+def serif (suffix $)(expr breadth,theta,left_jut,right_jut)=
+ penpos$(breadth/abs sind theta,0);
+ z$a - z$l = z$f - z$r = (bracket/abs sind theta)*dir theta;
+ y$c = y$d; y$b = y$e = y$; y$b - y$c = if theta<0: - fi slab;
+ x$b = x$c = x$l - left_jut;  x$d = x$e = x$r + right_jut; 
+ labels($a,$b,$c,$d,$e,$f) enddef;
+
+def serif_edge suffix $ =
+ (serif_bracket($a,$l,$b)..z$c
+  ---z$d..reverse serif_bracket($f,$r,$e) ) enddef;
+
+def serif_bracket(suffix i,j,k) =
+ (z.i{z.j-z.i}...serif_darkness[z.j,.5[z.i,z.k]]{z.k-z.i}
+  ...z.k{z.k-z.j}) enddef;
+
+beginchar("H",cap#,em#,0); "The letter H"; % args: width,height,depth
+% Definitionen...
+ path branch[];
+  branch1 = (0,137){1,-1}..{-2,-6}(4,119)
+      & (4,119){2,3}..{-3,-2}(13,110)
+      & (13,110){up}..{down}(4,110)..{3,-2}(8,105)..{left}(8,103)
+    --- (4,103)..(2,101){down}..{1,-9}(6,44)
+     .. {-2,-3}(3,40){1,-1}..{down}(8,36)..{-1,-1}(3,32){2,-6}
+     .. {-1,-3}(4,12)..{down}(8,8)..{-1,-1}(6,6);
+  branch2 = branch1 reflectedabout ((0,0),(0,135));
+  branch3 = reverse branch2 & branch1 ..{left}(0,0)..cycle;
+  branch4 = halfcircle rotated 180 --- (0.5,0.7)--(-0.5,0.7)---cycle;
+%
+%
+% draw boundary curve
+%
+ pickup pencircle scaled 1pt;  % vorher .67pt
+ draw branch4 scaled (.97w) shifted (.5w,.5w);
+%
+% draw the two pillars ...
+%
+ pickup pencircle scaled .6pt;  % vorher .3pt
+ fill branch3 rotatedaround ((0,58),-36) scaled (w/140) shifted (.5w,.22w);
+ fill branch3 rotatedaround ((0,58),36) scaled (w/140) shifted (.5w,.22w);
+%
+% now draw charactwers U & T:
+%
+% Definitionen: height & width of letters...
+ let_h = h/4.3; let_w = w/4.1;
+
+ slab = let_h/20; thick = let_h/5.5; thin = let_h/11;
+ jut = let_h/7; bracket = let_h/6; serif_darkness = 0.4;
+
+ pickup pencircle scaled 0.6pt;
+
+%
+% draw U first:
+%
+ y1 = y5 = let_h - slab; y3 = 0;
+ y8 = y6 = .4let_h; y2 = y4 = .45let_h;
+ y7 = .5[thin,thick];    % + slab;
+ x1 = x2 + .5thick = .36let_w;
+ x8 - x2 = thick;
+ x3 = .5let_w + 2slab;
+ x7 = x3 + .5thin;
+ x5 = x6 + .5thin = .9let_w;
+ x4 - x6 = thin;
+
+ serif(1,thick,-90,0.8jut,0.8jut);
+ serif(5,thin,-90,0.5jut,0.5jut);
+ 
+ fill ( reverse serif_edge1 --z2{down}..tension0.85..{right}z3
+    ..tension0.85..{up}z4 -- reverse serif_edge5--z6{down}
+    ..tension0.8..{left}z7..tension0.8..{up}z8--cycle)
+  shifted (w/2-1.8let_w,h/2.4);
+
+ penlabels(1,2,3,4,5,6,7,8);
+
+% now draw letter T:
+%
+% Punkt 13 gibts nicht:
+%
+% 10,11,12,14,17:
+ x11 = x12 = .5let_w = x17 = x10 + .4let_w = x14 - .4let_w;
+ y10 = y14 = let_h - 5slab;
+ y11 = let_h - 2.3slab = y17 - 1.5slab;
+ y12 = slab;
+% 15,19:
+ x15 - x14 = x10 - x19 = slab;
+ y19 = y15 = y14 + 0.3slab;
+% 16,18:
+ x18 - x10 = x14 - x16 = 0.5slab; 
+ y16 = y18 = let_h;
+
+ serif(11,thick,-90,0.7jut,0.7jut);  % vorher .8jut
+ serif(12,thick,90,0.8jut,0.8jut);
+ fill ( serif_edge12--serif_bracket(11f,11r,11e)
+   ..tension1.2..{right}z14..{dir 15}z15--z16{z17-z16}..{left}z17
+   ..{z18-z17}z18 --z19{dir-15}..z10{right}..tension1.2
+   ..reverse serif_bracket(11a,11l,11b)--cycle)
+  shifted (w/2+0.8let_w,h/2.4);
+
+ penlabels(10,11,12,14,15,16,17,18,19);
+
+endchar;
+
+bye.

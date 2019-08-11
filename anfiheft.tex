@@ -1,0 +1,330 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage{ifpdf}
+%\usepackage{times}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage[figuresleft]{rotating} % Stundenplan im Anhang
+\usepackage{enumitem} % Checkliste
+\usepackage{qrcode} % Umschlagrückseite
+\usepackage{xcolor,colortbl}
+\usepackage{tabularx}
+
+% For hyperlinks
+\ifpdf
+ \usepackage{hyperref}
+\else
+ \usepackage[ps2pdf,breaklinks=true]{hyperref}
+\fi
+
+%
+\pagestyle{plain}
+% Einrückung der ersten Zeile eines Absatzes
+\setlength{\parindent}{0mm}
+% Abstand zwischen zwei Absätzen
+\setlength{\parskip}{1em plus0.5ex minus0.5ex}
+\setlength{\leftmargin}{0.0em}
+
+\renewcommand*\descriptionlabel[1]{\hspace\labelsep
+                                \normalfont\bfseries #1}
+
+%Serifenfrei
+\renewcommand*\familydefault{\sfdefault}
+
+\newcommand{\At}{@}
+
+
+\hsize 15.5cm
+\vsize 23cm
+\hoffset-1cm
+\voffset-2.2cm
+\textheight=\vsize
+\textwidth=\hsize
+
+\newif\ifwintersemester
+\newif\ifsommersemester
+
+%set for info, unset for kogni
+\newif\ifinfo
+%\infotrue
+
+
+\begin{document}
+
+\emergencystretch=2cm
+
+%\font\cms=cmss17 scaled \magstep2
+\font\vlarge=cmbx12 scaled \magstep5
+\newdimen\oldbaselineskp
+\newcount\auflage
+\newcount\jahr
+\newcount\jahrpluseins
+\setcounter{secnumdepth}{0}
+
+\newcommand*{\email}[1]{\url{#1}}
+\newcommand*{\filename}[1]{\url{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Auflage und Jahr hier eintragen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{config.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\jahrpluseins=\jahr
+\advance \jahrpluseins by 1
+
+%%%% Seite 1
+\ifinfo
+\input{info/titlepage.tex}
+\else
+\input{kogni/titlepage.tex}
+\fi
+
+%%%% Seite 2
+\ifinfo
+\input{info/secondpage.tex}
+\else
+\input{kogni/secondpage.tex}
+\fi
+
+%******************************************************
+
+\section{Vorwort}
+\ifinfo
+\input{info/vorwort.tex}
+\else
+\input{kogni/vorwort.tex}
+\fi
+
+%******************************************************
+
+\tableofcontents
+\newpage
+
+%******************************************************
+\onecolumn
+\section{Die Fachschaft}
+\ifinfo
+\input{info/fachschaft.tex}
+\else
+\input{kogni/fachschaft.tex}
+\fi
+
+\section{Neu an der Uni}
+\subsection{Das Uni Einmaleins}
+\ifinfo
+	\input{info/erste_woche/einmaleins.tex}
+
+\else
+	\input{kogni/erste_woche/einmaleins.tex}
+
+
+	\subsection{Was erwartet euch?}
+	\input{kogni/erste_woche/was-erwartet-euch.tex}
+
+	\subsection{Die zukünftigen Semester}
+	\input{kogni/erste_woche/zukunft.tex}
+\fi 
+ 
+\pagebreak
+
+\subsection{Checkliste}
+\ifinfo
+\input{info/erste_woche/checkliste.tex}
+\else
+\input{kogni/erste_woche/checkliste.tex}
+\fi 
+
+%******************************************************
+
+%\pagebreak
+\section{Die Vorlesungszeit}
+\ifinfo
+	\subsection{Der Stundenplan}
+	\input{info/vorlesungszeit/stundenplan.tex}
+	\input{info/vorlesungszeit/verlaufsplaene.tex}
+\else
+	\subsection{Versuchspersonenstunden}
+	\input{kogni/vorlesungszeit/vph.tex}
+\fi 
+
+\subsection{Die Mensen}
+\input{info/vorlesungszeit/mensen.tex}
+
+\subsection{Der Hochschulsport}
+\input{info/vorlesungszeit/hochschulsport.tex}
+
+\subsection{Das Unikino}
+\input{info/vorlesungszeit/unikino.tex}
+% \pagebreak
+
+
+\subsection{Das Fachsprachenzentrum}
+\input{info/vorlesungszeit/fachsprachenzentrum.tex}
+
+\pagebreak
+\section{Die vorlesungsfreie Zeit}
+\subsection{Die Klausuren}
+\ifinfo
+	\input{info/vorlesungsfreie-zeit/klausuren.tex}
+\else
+	\input{kogni/vorlesungsfreie-zeit/klausuren.tex}
+\fi 
+
+\subsection{Das Prüfungsprotokolle-Interface}
+\input{info/vorlesungsfreie-zeit/ppi.tex}
+\ifinfo
+\else
+	\vfill
+\fi 
+
+\ifinfo
+	\subsection{Praktika}
+	\input{info/vorlesungsfreie-zeit/praktika.tex}
+\fi 
+
+\pagebreak
+
+\section{Universität und Institute}
+\subsection{Teile der Universität}
+\ifinfo
+	\input{info/uni/gebaeude.tex}
+\else
+	\input{kogni/uni/gebaeude.tex}
+\fi 
+
+\subsection{Was ist wo?}
+\ifinfo
+	\input{info/uni/infrastruktur.tex}
+\else
+	\input{kogni/uni/infrastruktur.tex}
+\fi 
+
+\pagebreak
+\subsection{PCs, Mail etc.}
+	\input{info/infra/zdv.tex} 
+\subsection{WLAN-Zugang mit eduroam}
+	\input{info/infra/eduroam.tex}
+
+\section{Tübingen - mehr als eine Universität}
+\subsection{Wohnen}
+\input{info/tuebingen/wohnen.tex}
+
+\subsection{Verkehr}
+\input{info/tuebingen/verkehr.tex}
+
+\subsection{Sehenswürdigkeiten}
+\input{info/tuebingen/sehenswuerdigkeiten.tex}
+\pagebreak
+\subsection{Freizeitgestaltung}
+\input{info/tuebingen/freizeitgestaltung.tex}
+
+\newpage
+\section{Hilfe und Beratung}
+\ifinfo
+	\subsection{Don't panic! -- Erste Hilfe: fsi}
+	\input{info/hilfe/fsi.tex}
+\else
+	\input{kogni/hilfe/hilfe.tex}
+\fi 
+
+\subsection{Mailinglisten}
+\ifinfo
+	\input{info/hilfe/mailinglisten.tex}
+\else
+	\input{kogni/hilfe/mailinglisten.tex}
+\fi 
+
+\ifinfo
+	\subsection{Ansprechpartner nach Studiengängen}
+	\input{info/hilfe/ansprechpartner.tex}
+
+	\subsection{Prüfungssekretariate}
+	\input{info/hilfe/pruefungsskretariate.tex}
+
+	\subsection{Studierendensekretariat}
+	\input{info/hilfe/studierendensekretariat.tex}
+
+	\subsection{Psychosoziale Beratung}
+	\input{info/hilfe/psycho_beratung.tex}
+\fi
+
+\newpage
+\section{Geld}
+
+\subsection{BaföG}
+\input{info/geld/bafoeg.tex}
+
+\subsection{Stipendien}
+\input{info/geld/stipendien.tex}
+
+\subsection{Nebenjobs}
+\input{info/geld/job.tex}
+
+\ifinfo
+\newpage
+\fi
+
+\section{Ausland}
+\input{info/ausland/ausland.tex}
+
+\newpage
+%\twocolumn
+%\section{Kneipenverzeichnis}
+%\input{tuebingen/kneipen.tex}
+%\onecolumn
+
+\section{Lagepläne}
+\ifinfo
+\input{info/anhang/lageplaene.tex}
+\else
+\input{kogni/anhang/lageplaene.tex}
+\fi 
+\newpage
+
+
+%\pagebreak
+\section*{Verz. wicht. Abk.}
+\input{info/anhang/abk.tex}
+\ifinfo
+\pagebreak
+\fi 
+
+
+% Placeholder-Seite für Seitenzahl
+
+%\pagebreak
+\addcontentsline{toc}{section}{Stundenplan zum selbst ausfüllen}
+\begin{center}
+	\begin{sidewaysfigure}
+		\input{info/anhang/stundenplan.tex}
+	\end{sidewaysfigure}
+\end{center}
+\pagebreak 
+\section*{Platz für Notizen:}
+\vfill 
+\pagebreak 
+\newpage
+\thispagestyle{plain}
+\mbox{}
+
+\addcontentsline{toc}{section}{Adressen \& Telefonnummern}
+\ifinfo
+\input{info/adressen.tex}
+\else
+%%damit adressen auf gerader seitenzahl sind
+\pagebreak
+\input{kogni/adressen.tex}
+\fi 
+
+\ifinfo
+% Umschlagrückseite
+\input{info/keepcalm.tex}
+\fi
+
+\end{document}
