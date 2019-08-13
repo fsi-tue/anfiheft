@@ -21,10 +21,10 @@ CONFIG = makeconfig.tex
 # automatically set the build parameters like year, semester, auflage and if the kogni or info build should be done
 CONF_INFOTRUE = \infotrue
 INFO_AUFLAGE = $(shell if [ $(SEMESTER) = "wintersemestertrue" ]; then echo $$(( $(( $(( $(YEAR)-$(BASEYEAR) )) *2 )) +$(BASEEDITION_INFO))); else echo $$(( $(( $(YEAR)-$(BASEYEAR) )) + $(BASEEDITION_INFO))); fi)
-INFO_CONF = '\jahr=$(YEAR) \auflage=$(INFO_AUFLAGE) \$(SEMESTER) $(CONF_INFOTRUE)'
+INFO_CONF = '\\jahr=$(YEAR) \\auflage=$(INFO_AUFLAGE) \\$(SEMESTER) $(CONF_INFOTRUE)'
 
 KOGNI_AUFLAGE = $(shell echo $$(( $(( $(YEAR)-$(BASEYEAR) )) +$(BASEEDITION_KOGNI) )) )
-KOGNI_CONF  = '\jahr=$(YEAR) \$(SEMESTER) \auflage=$(KOGNI_AUFLAGE)'
+KOGNI_CONF  = '\\jahr=$(YEAR) \\$(SEMESTER) \\auflage=$(KOGNI_AUFLAGE)'
  
 
 # Aliases
