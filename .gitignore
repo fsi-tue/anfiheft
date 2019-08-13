@@ -11,8 +11,8 @@
 *.dvi
 *.swp
 anfiheft.pdf
-anfiheft-info.pdf
-anfiheft-kogni.pdf
-makeconfig.tex
+!anfiheft-info.pdf
+!anfiheft-kogni.pdf
+*makeconfig.tex
 /tmp/
 02
