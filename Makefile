@@ -28,7 +28,7 @@ KOGNI_CONF  = '\jahr=$(YEAR) \$(SEMESTER) \auflage=$(KOGNI_AUFLAGE)'
  
 
 # Aliases
-default: help
+default: all
 info: anfiheft-info.pdf
 kogni: anfiheft-kogni.pdf
 
