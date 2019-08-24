@@ -11,6 +11,9 @@ kogni-makeconfig.tex
 out-info/
 out-kogni/
 
+# Nix (the package manager we use for CI)
+result
+
 # Editor files
 *.swp
 
