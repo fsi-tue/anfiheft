@@ -20,7 +20,11 @@ Wenn Nutzung des Makefiles nicht möglich (z.B. Windows):
 - siehe makeconfig.default.tex
 
 ## Wichtig
-Es ist darauf zu achten, dass die Anzahl der Seiten (insgesamt) durch 4 teilbar sind! Ansonsten ist 'KEEP CALM AND JOIN THE FACHSCHAFT' nicht auf der letzten Seite (auf dem Umschlag) gedruckt.
+
+Es ist darauf zu achten, dass die Anzahl der Seiten (insgesamt) durch 4 teilbar
+sind! Ansonsten ist 'KEEP CALM AND JOIN THE FACHSCHAFT' nicht auf der letzten
+Seite (auf dem Umschlag) gedruckt. Die Seitenzahl kann mit `make check` geprüft
+werden.
 
 ## Private Subversion history
 

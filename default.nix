@@ -14,6 +14,8 @@ stdenv.mkDerivation rec {
 
   src = lib.cleanSource ./.;
 
+  doCheck = true;
+
   nativeBuildInputs = [
     (texlive.combine {
       inherit (texlive) scheme-minimal latexmk latexconfig latex
@@ -21,7 +23,7 @@ stdenv.mkDerivation rec {
         graphics oberdiek tools enumitem qrcode xcolor xkeyval colortbl
         hyperref url;
     })
-  ];
+  ] ++ lib.optional doCheck xpdf;
 
   postPatch = ''
     # Set SOURCE_DATE_EPOCH to make the build reproducible:
@@ -40,6 +42,11 @@ stdenv.mkDerivation rec {
   buildPhase = ''
     # Build the PDFs
     make
+  '';
+
+  checkPhase = ''
+    # Make sure that the number of pages is divisible by 4:
+    make check
   '';
 
   installPhase = ''

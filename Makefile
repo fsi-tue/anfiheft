@@ -61,6 +61,26 @@ anfiheft-kogni.pdf: anfiheft.tex
 	cp $(BUILDDIR)-kogni/anfiheft.pdf anfiheft-kogni.pdf
 	mv $(CONFIG) kogni-$(CONFIG)
 
+.PHONY: check
+check:
+	# Note: This target requires the pdfinfo binary from Xpdf.
+	set -eu; \
+	FAILURE=0; \
+	for file in anfiheft-info.pdf anfiheft-kogni.pdf; do \
+	  PAGE_COUNT=$$(pdfinfo $$file | grep Pages | grep -oE '[0-9]+$$'); \
+	  REMAINDER=$$((PAGE_COUNT % 4)); \
+	  if [[ $$REMAINDER -ne 0 ]]; then \
+	    echo "Failure: The number of pages in the PDF file $$file" \
+	      "is not divisible by 4 ($$PAGE_COUNT % 4 = $$REMAINDER)." 1>&2; \
+	    FAILURE=1; \
+	  fi \
+	done; \
+	if [[ $$FAILURE -eq 0 ]]; then \
+	  echo "Success, all checks passed."; \
+	else \
+	  exit 1; \
+	fi
+
 .PHONY: clean
 clean:
 	if [ -d $(BUILDDIR)-info ]; then rm --recursive ./$(BUILDDIR)-info; fi
