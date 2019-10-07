@@ -17,9 +17,9 @@
 
 % For hyperlinks
 \ifpdf
- \usepackage{hyperref}
+	\usepackage{hyperref}
 \else
- \usepackage[ps2pdf,breaklinks=true]{hyperref}
+	\usepackage[ps2pdf,breaklinks=true]{hyperref}
 \fi
 
 %
@@ -31,7 +31,7 @@
 \setlength{\leftmargin}{0.0em}
 
 \renewcommand*\descriptionlabel[1]{\hspace\labelsep
-                                \normalfont\bfseries #1}
+	\normalfont\bfseries #1}
 
 %Serifenfrei
 \renewcommand*\familydefault{\sfdefault}
@@ -80,25 +80,25 @@
 
 %%%% Seite 1
 \ifinfo
-\input{info/titlepage.tex}
+	\input{info/titlepage.tex}
 \else
-\input{kogni/titlepage.tex}
+	\input{kogni/titlepage.tex}
 \fi
 
 %%%% Seite 2
 \ifinfo
-\input{info/secondpage.tex}
+	\input{info/secondpage.tex}
 \else
-\input{kogni/secondpage.tex}
+	\input{kogni/secondpage.tex}
 \fi
 
 %******************************************************
 
 \section{Vorwort}
 \ifinfo
-\input{info/vorwort.tex}
+	\input{info/vorwort.tex}
 \else
-\input{kogni/vorwort.tex}
+	\input{kogni/vorwort.tex}
 \fi
 
 %******************************************************
@@ -110,9 +110,9 @@
 \onecolumn
 \section{Die Fachschaft}
 \ifinfo
-\input{info/fachschaft.tex}
+	\input{info/fachschaft.tex}
 \else
-\input{kogni/fachschaft.tex}
+	\input{kogni/fachschaft.tex}
 \fi
 
 \section{Neu an der Uni}
@@ -134,16 +134,16 @@
 
 	\subsection{Die ersten Wochen}
 	\input{kogni/erste_woche/die_ersten_wochen.tex}
-\fi 
- 
+\fi
+
 \pagebreak
 
 \subsection{Checkliste}
 \ifinfo
-\input{info/erste_woche/checkliste.tex}
+	\input{info/erste_woche/checkliste.tex}
 \else
-\input{kogni/erste_woche/checkliste.tex}
-\fi 
+	\input{kogni/erste_woche/checkliste.tex}
+\fi
 
 %******************************************************
 
@@ -156,7 +156,7 @@
 \else
 	\subsection{Versuchspersonenstunden}
 	\input{kogni/vorlesungszeit/vph.tex}
-\fi 
+\fi
 
 \subsection{Die Mensen}
 \input{info/vorlesungszeit/mensen.tex}
@@ -179,19 +179,19 @@
 	\input{info/vorlesungsfreie-zeit/klausuren.tex}
 \else
 	\input{kogni/vorlesungsfreie-zeit/klausuren.tex}
-\fi 
+\fi
 
 \subsection{Das Prüfungsprotokolle-Interface}
 \input{info/vorlesungsfreie-zeit/ppi.tex}
 \ifinfo
 \else
 	\vfill
-\fi 
+\fi
 
 \ifinfo
 	\subsection{Praktika}
 	\input{info/vorlesungsfreie-zeit/praktika.tex}
-\fi 
+\fi
 
 \pagebreak
 
@@ -201,18 +201,18 @@
 	\input{info/uni/gebaeude.tex}
 \else
 	\input{kogni/uni/gebaeude.tex}
-\fi 
+\fi
 
 \subsection{Was ist wo?}
 \ifinfo
 	\input{info/uni/infrastruktur.tex}
 \else
 	\input{kogni/uni/infrastruktur.tex}
-\fi 
+\fi
 
 \pagebreak
 \subsection{PCs, Mail etc.}
-	\input{info/infra/zdv.tex} 
+	\input{info/infra/zdv.tex}
 \subsection{WLAN-Zugang mit eduroam}
 	\input{info/infra/eduroam.tex}
 
@@ -236,14 +236,14 @@
 	\input{info/hilfe/fsi.tex}
 \else
 	\input{kogni/hilfe/hilfe.tex}
-\fi 
+\fi
 
 \subsection{Mailinglisten}
 \ifinfo
 	\input{info/hilfe/mailinglisten.tex}
 \else
 	\input{kogni/hilfe/mailinglisten.tex}
-\fi 
+\fi
 
 \ifinfo
 	\subsection{Ansprechpartner nach Studiengängen}
@@ -272,7 +272,7 @@
 \input{info/geld/job.tex}
 
 \ifinfo
-\newpage
+	\newpage
 \fi
 
 \section{Ausland}
@@ -286,10 +286,10 @@
 
 \section{Lagepläne}
 \ifinfo
-\input{info/anhang/lageplaene.tex}
+	\input{info/anhang/lageplaene.tex}
 \else
-\input{kogni/anhang/lageplaene.tex}
-\fi 
+	\input{kogni/anhang/lageplaene.tex}
+\fi
 \newpage
 
 
@@ -297,8 +297,8 @@
 \section*{Verz. wicht. Abk.}
 \input{info/anhang/abk.tex}
 \ifinfo
-\pagebreak
-\fi 
+	\pagebreak
+\fi
 
 
 % Placeholder-Seite für Seitenzahl
@@ -310,27 +310,27 @@
 		\input{info/anhang/stundenplan.tex}
 	\end{sidewaysfigure}
 \end{center}
-\pagebreak 
+\pagebreak
 \section*{Platz für Notizen:}
 \newpage\null\thispagestyle{empty}\newpage
 \ifinfo
-  \newpage\null\thispagestyle{empty}\newpage
-  \newpage\null\thispagestyle{empty}\newpage
+	\newpage\null\thispagestyle{empty}\newpage
+	\newpage\null\thispagestyle{empty}\newpage
 \fi
 
 
 \addcontentsline{toc}{section}{Adressen \& Telefonnummern}
 \ifinfo
-\input{info/adressen.tex}
+	\input{info/adressen.tex}
 \else
-%%damit adressen auf gerader seitenzahl sind
-\pagebreak
-\input{kogni/adressen.tex}
-\fi 
+	%%damit adressen auf gerader seitenzahl sind
+	\pagebreak
+	\input{kogni/adressen.tex}
+\fi
 
 \ifinfo
-% Umschlagrückseite
-\input{info/keepcalm.tex}
+	% Umschlagrückseite
+	\input{info/keepcalm.tex}
 \fi
 
 \end{document}
