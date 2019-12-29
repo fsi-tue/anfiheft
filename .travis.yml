@@ -1,11 +1,11 @@
 sudo: false
 language: nix
-script: nix-build --argstr date "$(date --date=@$(git log -1 --pretty=%ct) +%F)"
+script: bash .travis/setup.sh && nix-build --argstr date "$(date --date=@$(git log -1 --pretty=%ct) +%F)" --arg doCheck true
 
 deploy:
   skip_cleanup: true
   provider: script
-  script: bash deploy.sh
+  script: bash .travis/deploy.sh
   on:
     branch: master
     repo: fsi-tue/anfiheft
