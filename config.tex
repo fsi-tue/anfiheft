@@ -14,7 +14,8 @@
 	\newcommand{\kognimentorenTwolines}{Lena Holzwarth und \newline Julia Dietl}
 \fi
 
-% Shorthandle for QR-Codes
+% Shorthandles for QR-Codes
+% small
 \newcommand{\link}[2]{
 	\colorbox{gray!10}{
 		\parbox{\textwidth}{
@@ -25,3 +26,18 @@
 				\textbf{#2} \\ #1
 			\end{minipage}
 }}}
+
+% big
+\newcommand{\linkbig}[3]{
+	\colorbox{gray!10}{
+		\parbox{0.5\textwidth}{
+			\centering
+			\qrcode{#1} \\
+			\vspace*{2mm}
+			\textbf{#2} \\ #1
+	}}
+	\hfill
+	\parbox{0.5\textwidth}{
+		#3
+	}
+}
