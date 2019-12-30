@@ -1,5 +1,6 @@
 \input{makeconfig.tex}
 
+% Semesterticket
 \newcommand{\Ticketpreis}{\EUR{99,70}}
 
 \ifinfo
@@ -12,3 +13,31 @@
 	\newcommand{\kognimentoren}{Lena Holzwarth und Julia Dietl}
 	\newcommand{\kognimentorenTwolines}{Lena Holzwarth und \newline Julia Dietl}
 \fi
+
+% Shorthandles for QR-Codes
+% small
+\newcommand{\link}[2]{
+	\colorbox{gray!10}{
+		\parbox{\textwidth}{
+			\begin{minipage}{0.2\textwidth}
+				\qrcode{#1}
+			\end{minipage} \hfill
+			\begin{minipage}{0.8\textwidth}
+				\textbf{#2} \\ #1
+			\end{minipage}
+}}}
+
+% big
+\newcommand{\linkbig}[3]{
+	\colorbox{gray!10}{
+		\parbox{0.5\textwidth}{
+			\centering
+			\qrcode{#1} \\
+			\vspace*{2mm}
+			\textbf{#2} \\ #1
+	}}
+	\hfill
+	\parbox{0.5\textwidth}{
+		#3
+	}
+}

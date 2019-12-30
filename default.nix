@@ -1,6 +1,7 @@
 { nixpkgs ? <nixpkgs>
 # Run "nix-build --argstr date YYYY-MM-DD" to reproduce a build:
 , date ? null
+, doCheck ? false # Disabled by default since xpdf must be added to permittedInsecurePackages
 }:
 
 with import nixpkgs {};
@@ -14,7 +15,7 @@ stdenv.mkDerivation rec {
 
   src = lib.cleanSource ./.;
 
-  doCheck = true;
+  inherit doCheck;
 
   nativeBuildInputs = [
     (texlive.combine {
