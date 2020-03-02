@@ -1,0 +1,75 @@
+%%
+% Die folgenden Befehle müssen eingebunden werden!
+%%
+\newcommand{\no}     {\faIcon{times}}
+\newcommand{\yes}    {\faIcon{check}}
+\newcommand{\unknown}{\faIcon{question}}
+
+\newcommand{\is}[1]{\ifcsvstrcmp{#1}{}{n.a.}{#1}}
+
+\newcommand{\has}[1]{\ifcsvstrcmp{#1}{0}{\no}{\ifcsvstrcmp{#1}{1}{\yes}{\unknown}}}
+
+\newcommand{\features}[7]{
+    \begin{tabular}{c|c|c|c|c|c|c}
+        \renewcommand{\arraystretch}{2.5}
+        \faIcon{utensils}       & \faIcon{beer}         & \faIcon{cocktail} & \faIcon{wifi}         & 
+        \faIcon{shopping-bag}   & \faIcon{smoking}      & \faIcon{smoking-ban}              \\ \hline
+        #1 & #2 & #3 & #4 & #5 & #6 & #7
+    \end{tabular}
+}
+
+\newcommand{\kneipenCSV}{kki/dump.csv}
+
+% +--------------------------------+
+% | A better mockup for csv values |
+% +--------------------------------+
+%/csv/respect all
+\centerline{\includegraphics[width=100px]{kki/kki-small.pdf}}
+
+\section*{KKI - Kneipen und Kultur Interface}
+
+Wer Student ist neigt dazu noch keine allzu verfeinerten Kochkünste aufzuweisen. (Dabei bestätigen Ausnahmen selbstverständlich die Regel ;D)\\
+Jedenfalls ist der frisch von zuhause ausgezogene Student auf eine Ernährung abseits von Tiefkühl-Pizza und Mensaessen angewiesen. Hierfür biedern sich die vielen Lokalitäten Tübingens an.\\
+In diesem von der Fachschaft kuratierten\footnote{Man sagt uns zwar nach ein Saufverein zu sein, doch auch wir haben keine Stahllebern. Darum freuen wir uns über jedes Update. Fühlt euch ge-crowdsourced.} Kneipenführer sollt ihr fündig werden und zur Pre-Evaluation der Einkehr informiert sein.
+
+\begin{center}
+	\noindent
+	\begin{tabular}{cl|cl}
+		\faUtensils     & Essen          & \faBeer           & Bier     \\
+		\faCocktail     & Cocktails      & \faShoppingBag    & To Go      \\
+		\faSmoking      & Raucherbereich & \faSmokingBan     & Nicht-Raucher \\
+		\faBeer\faEuroSign               & Preis pro Halbe   & 
+		\textbf{!}\faBeer\faEuroSign     & Preis Softdrink\\
+		\faWifi           & FreeWifi     &&\\
+	\end{tabular}\\
+	Legende
+\end{center}
+
+\csvreader[separator=pipe,respect all]{\kneipenCSV}
+{1 =\name, 2=\address,  3=\beerprice,
+	4 =\softdrinkprice,    5=\web ,6=\phone,
+	7 =\food, 8=\beer,     9=\wifi,10=\cocktails,
+	11=\togo,12=\smoking,  13=\smokingBan,
+	14=\desc,15=\category, 16=\update
+}{
+	\noindent\\[.5em]
+	\begin{minipage}{0.6\textwidth}
+		\subsection*{\name \small{$~\mid \MakeUppercase\category$}}
+		\begin{tabular}{cl}
+			\faMapMarker & \is{\address} \\
+			\faPhone     & \is{\phone}   \\
+			\faLaptop    & \is{\web}
+		\end{tabular}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.4\textwidth}
+		% Essen | Getränke | Cocktails | Wifi | ToGo | Smoking | Non-Smoking
+		\features{\has{\food}}{\has{\beer}}{\has{\cocktails}}{\has{\wifi}}
+		{\has{\togo}}{\has{\smoking}}{\has{\smokingBan}}\\[0.5em]
+		\begin{tabular}{rll}
+			\faBeer\faEuroSign           & \beerprice\euro      &  Stand:\\   % Der Bier Preis
+			\textbf{!}\faBeer\faEuroSign & \softdrinkprice\euro & \update    % Der Not-Bier Preis
+		\end{tabular}
+	\end{minipage}\\[.5em]
+	\desc\\
+}

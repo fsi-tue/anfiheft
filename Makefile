@@ -61,6 +61,12 @@ anfiheft-kogni.pdf: anfiheft.tex
 	cp $(BUILDDIR)-kogni/anfiheft.pdf anfiheft-kogni.pdf
 	mv $(CONFIG) kogni-$(CONFIG)
 
+# DB-Dump der für das KKI geladen werden muss:
+.PHONY: kki/dump.csv # Could always change since we fetch it from the web
+kki/dump.csv:
+	curl -o kki/dump.csv https://sandbox.fsi.uni-tuebingen.de/~kneipenkulturinterface/dump.php
+
+
 .PHONY: check
 check:
 	# Note: This target requires the pdfinfo binary from Xpdf.
@@ -99,6 +105,7 @@ help:
 	@echo '  all            - Build the info- and kogni-anfiheft (default)'
 	@echo '  info           - Build only the info-anfiheft'
 	@echo '  kogni          - Build only the kogni-anfiheft'
+	@echo '  kki/dump.csv   - Update the DB dump from the KKI'
 	@echo 'Auxiliary targets:'
 	@echo '  help           - Show this help'
 	@echo 'Cleaning targets:'
