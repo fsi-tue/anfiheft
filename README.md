@@ -17,6 +17,7 @@ Nutzung des Makefiles:
 - `make info` => Infoheft erstellen
 - `make kogni` => Kogniheft erstellen
 - `make all` => beide Hefte erstellen (nur im Wintersemester sinnvoll)
+- `make kki/dump.csv` => Um den DB-Dump des KKI zu über `curl` zu aktualisieren
 
 Wenn Nutzung des Makefiles nicht möglich (z.B. Windows):
 - Siehe `makeconfig.default.tex`

@@ -15,6 +15,12 @@
 \usepackage{xcolor,colortbl}
 \usepackage{tabularx}
 
+%%
+% Required packages for KKI
+\usepackage{csvsimple}      % CSV usage
+\usepackage{fontawesome5}   % Pictograms used
+
+
 % For hyperlinks
 \ifpdf
 	\usepackage{hyperref}
@@ -305,6 +311,13 @@
 
 % Placeholder-Seite für Seitenzahl
 
+%%
+% KKI
+%%
+\input{kki/kki.tex}
+\addcontentsline{toc}{section}{Kneipen und Kulturinterface}
+
+
 %\pagebreak
 \addcontentsline{toc}{section}{Stundenplan zum selbst ausfüllen}
 \begin{center}
@@ -315,8 +328,13 @@
 \pagebreak
 \section*{Platz für Notizen:}
 \ifinfo
-	\newpage\null\thispagestyle{empty}\newpage
+\else
+	\newpage\null\thispagestyle{empty}
+	\newpage\null\thispagestyle{empty}
+	\newpage\null\thispagestyle{empty}
 \fi
+\newpage
+
 
 \addcontentsline{toc}{section}{Adressen \& Telefonnummern}
 \ifinfo
