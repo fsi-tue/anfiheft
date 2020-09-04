@@ -41,3 +41,28 @@
 		#3
 	}
 }
+
+% ========= Corona Disclaimer ===========
+% Disclaimer with desciption parameter
+\newcommand{\coronabox}[1]{
+    \noindent
+    \colorbox{orange!10}{
+        \parbox{\textwidth}{
+            \begin{minipage}{.15\textwidth}
+                \centering
+                \color{red}\Huge\faIcon{virus}
+            \end{minipage}\begin{minipage}{.85\textwidth}
+                \vspace*{3mm}
+                \textbf{CoVid Disclaimer}\\
+                #1
+                \vspace*{3mm}
+            \end{minipage}
+}}}
+
+% Generic Disclaimer
+% The text below is not final. Feel free to find something mor suitable
+\newcommand{\corona}{\coronabox{
+    Aufgrund der Corona Pandemie und den einhergehenden Hygienevorschriften können wir hierüber keine Aussage treffen. \\
+    Informiert dich bitte auf den Informationsportalen der zuständingen Behörden/Organisationen.
+}}
+
