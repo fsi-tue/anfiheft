@@ -6,7 +6,15 @@
 \ifinfo
 	\newcommand{\Infoprof}{Ostermann}
 	\newcommand{\Matheprof}{Markwig}
-	\newcommand{\Studiendekan}{Nieselt}
+
+	% studentische Beratung
+        \newcommand{\studBeratungInfo}{Elisabeth Fritze}
+        \newcommand{\studBeratungMedien}{Vanessa Kirchner}
+        \newcommand{\studBeratungMedizin}{Felix Sieghörtner}
+        \newcommand{\studBeratungLehramt}{Saskia Honeck}
+        \newcommand{\studBeratungKogni}{Lena Hoeppe \& Jana Krämer}
+
+\newcommand{\Studiendekan}{Nieselt}
 \else
 	\newcommand{\studBeratung}{Lena Hoeppe und Jana Krämer}
 	\newcommand{\studBeratungTwolines}{Lena Hoeppe und \newline Jana Krämer}
@@ -50,10 +58,10 @@
         \parbox{\textwidth}{
             \begin{minipage}{.15\textwidth}
                 \centering
-                \color{red}\Huge\faIcon{virus}
+                \color{red}\Huge\faIcon{shield-virus}
             \end{minipage}\begin{minipage}{.85\textwidth}
                 \vspace*{3mm}
-                \textbf{CoVid Disclaimer}\\
+                \textbf{Corona Disclaimer}\\
                 #1
                 \vspace*{3mm}
             \end{minipage}
@@ -62,7 +70,6 @@
 % Generic Disclaimer
 % The text below is not final. Feel free to find something mor suitable
 \newcommand{\corona}{\coronabox{
-    Aufgrund der Corona Pandemie und den einhergehenden Hygienevorschriften können wir hierüber keine Aussage treffen. \\
-    Informiert dich bitte auf den Informationsportalen der zuständingen Behörden/Organisationen.
+Wie bei allem lässt sich hier nichts definitiv sagen. Bitte informiere dich \\ direkt bei der betreffenden Stelle.
 }}
 
