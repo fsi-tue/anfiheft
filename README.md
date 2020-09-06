@@ -11,6 +11,7 @@ Dinge, die jedes Semester aktualisiert werden müssen:
 Dinge, die jedes Semester überprüft und ggf. aktualisiert werden müssen:
 - `info/adressen.tex`: Liste der aktuellen Professoren, etc.
 - `info/studienplaene/*`: Studienverlaufspläne
+- `info/fachschaft.tex`: Kontakte der anderen Fachschaften überprüfen
 
 Nutzung des Makefiles:
 - `make help` ;)
