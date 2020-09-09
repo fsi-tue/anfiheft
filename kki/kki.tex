@@ -52,10 +52,13 @@ In diesem von der Fachschaft kuratierten\footnote{Man sagt uns zwar nach ein Sau
 	11=\togo,12=\smoking,  13=\smokingBan,
 	14=\desc,15=\category, 16=\update
 }{
-	\noindent\\[.5em]
+	\vspace{-1.65em}
+	\noindent
+	\subsection*{\name \small{$~\mid \MakeUppercase\category$}}
+	\vspace{-1.45em}
 	\begin{minipage}{0.6\textwidth}
-		\subsection*{\name \small{$~\mid \MakeUppercase\category$}}
 		\begin{tabular}{cl}
+			\multicolumn{2}{l}{Stand: \update} \\
 			\faMapMarker & \is{\address} \\
 			\faPhone     & \is{\phone}   \\
 			\faLaptop    & \is{\web}
@@ -63,12 +66,13 @@ In diesem von der Fachschaft kuratierten\footnote{Man sagt uns zwar nach ein Sau
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.4\textwidth}
+		\vspace{-1.25em}
 		% Essen | Getränke | Cocktails | Wifi | ToGo | Smoking | Non-Smoking
 		\features{\has{\food}}{\has{\beer}}{\has{\cocktails}}{\has{\wifi}}
 		{\has{\togo}}{\has{\smoking}}{\has{\smokingBan}}\\[0.5em]
-		\begin{tabular}{rll}
-			\faBeer\faEuroSign           & \beerprice\euro      &  Stand:\\   % Der Bier Preis
-			\textbf{!}\faBeer\faEuroSign & \softdrinkprice\euro & \update    % Der Not-Bier Preis
+		\begin{tabular}{rlll}
+			\faBeer\faEuroSign               & \beerprice\euro         % Der Bier Preis
+			  & \textbf{!}\faBeer\faEuroSign & \softdrinkprice\euro \\ % Der Not-Bier Preis
 		\end{tabular}
 	\end{minipage}\\[.5em]
 	\desc\\
