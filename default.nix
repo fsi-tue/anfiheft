@@ -22,7 +22,8 @@ stdenv.mkDerivation rec {
       inherit (texlive) scheme-minimal latexmk latexconfig latex
         collection-fontsrecommended babel babel-german hyphen-german
         graphics oberdiek tools enumitem qrcode xcolor xkeyval colortbl
-        hyperref url csvsimple pgf etoolbox fontawesome5 l3kernel l3packages;
+        hyperref url csvsimple pgf etoolbox fontawesome5 l3kernel l3packages
+        hycolor atveryend epstopdf-pkg;
     })
   ] ++ lib.optional doCheck xpdf;
 
