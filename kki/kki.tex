@@ -6,6 +6,7 @@
 \newcommand{\unknown}{\faIcon{question}}
 
 \newcommand{\is}[1]{\ifcsvstrcmp{#1}{}{n.a.}{#1}}
+\newcommand{\isUrl}[1]{\ifcsvstrcmp{#1}{}{n.a.}{\small\url{#1}}}
 
 \newcommand{\has}[1]{\ifcsvstrcmp{#1}{0}{\no}{\ifcsvstrcmp{#1}{1}{\yes}{\unknown}}}
 
@@ -61,7 +62,7 @@ In diesem von der Fachschaft kuratierten\footnote{Man sagt uns zwar nach ein Sau
 			\multicolumn{2}{l}{Stand: \update} \\
 			\faMapMarker & \is{\address} \\
 			\faPhone     & \is{\phone}   \\
-			\faLaptop    & \is{\web}
+			\faLaptop    & \isUrl{\web}
 		\end{tabular}
 	\end{minipage}
 	\hfill
