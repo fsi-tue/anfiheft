@@ -64,7 +64,7 @@ anfiheft-kogni.pdf: anfiheft.tex
 # DB-Dump der für das KKI geladen werden muss:
 .PHONY: kki/dump.csv # Could always change since we fetch it from the web
 kki/dump.csv:
-	curl -o kki/dump.csv https://sandbox.fsi.uni-tuebingen.de/~kneipenkulturinterface/dump.php
+	curl -o kki/dump.csv https://kki.fsi.uni-tuebingen.de/dump.php
 
 
 .PHONY: check
