@@ -39,7 +39,7 @@ KOGNI_CONF  = '$(BASE_CONF) \auflage=$(KOGNI_AUFLAGE)'
 .PHONY: default
 default: all
 .PHONY: all
-all: kki/dump.csv info kogni
+all: info kogni
 .PHONY: info
 info: anfiheft-info.pdf
 .PHONY: kogni
