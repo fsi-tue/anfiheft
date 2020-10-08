@@ -1,20 +1,21 @@
 name|address|price_beer|price_softdrink|url|phone|has_food|has_beer|has_wifi|has_cocktails|has_togo|is_smokers|is_nonsmokers|description|category|last_update
  El  Pecado | Am  Stadtgraben  25 |3.80|3.40|https://www.el-pecado.com|07071/8598229|1|1|2|1|2|0|1| Eine  quirlige  Mischung  aus  Grillrestaurant,  Mexikaner  und  Cocktailbar.  Es  gibt  auf  Anfrage  auch  eine  Karte  mit  chinesischem  Essen! |restaurant|2020-02-23
-Unckel| Wilhelmstr.  17 |3.80|4.50|https://de-de.facebook.com/Ristorante.Unckel/|07071/252061|1|1|0|0|1|0|1| Leckere  günstige  Pizza,  verschiedene  Kaffeespezialitäten  und  -  besonders  empfehlenswert  -  Tiramisu  ohne  Ei! |restaurant|2020-09-07
-Boulanger| Collegiumsgasse  2 |3.40|3.00|||0|1|0|0|0|1|1| Urige  Altstadt-Kneipe,  die  für  ihre  Wisky-Auswahl  bekannt  ist.  Es  gibt  zwar  kein  Essen  zu  kaufen,  darf  dafür  aber  mitgebracht  werden. |bar|2020-09-07
-Ratskeller| Haaggasse  4 |3.40|3.90||07071/965153|1|1|2|1|2|2|1| Ein  riesiges  altes  Kellergewölbe  mit  verschiedensten  Biersorten,  Cocktails  und  warmer  Küche  bis  22  Uhr.  Leider  nicht  ganz  billig.  Wenn  die  Bude  voll  ist,  wartet  man  auch  gerne  mal  eine  halbe  Stunde  auf  die  nächste  Runde. |bar|2020-09-07
+Unckel| Wilhelmstr.  17 |3.80|4.50|https://fb.com/Ristorante.Unckel/|07071/252061|1|1|0|0|1|0|1| Leckere  günstige  Pizza,  verschiedene  Kaffeespezialitäten  und  -  besonders  empfehlenswert  -  Tiramisu  ohne  Ei! |restaurant|2020-10-08
+Boulanger| Collegiumsgasse  2 |3.40|3.00||07071/23345|0|1|0|0|0|1|1| Urige  Altstadt-Kneipe,  die  für  ihre  Wisky-Auswahl  bekannt  ist.  Es  gibt  zwar  kein  Essen  zu  kaufen,  darf  dafür  aber  mitgebracht  werden.  Die  Kneipe  besteht  seit  1782  unter  verschiedensten  Namen. |bar|2020-10-08
+Ratskeller| Haaggasse  4 |3.40|3.90|https://ratskeller-tuebingen.com|07071/965153|1|1|2|1|2|2|1| Ein  riesiges  altes  Kellergewölbe  mit  verschiedensten  Biersorten,  Cocktails  und  warmer  Küche  bis  22  Uhr.  Leider  nicht  ganz  billig.  Wenn  die  Bude  voll  ist,  wartet  man  auch  gerne  mal  eine  halbe  Stunde  auf  die  nächste  Runde. |bar|2020-10-08
  Irish  Pub  Saints  &  Scholars | Wilhelmstraße  42-50 |3.60|3.70|http://www.saints-and-scholars.de|07071/256408|1|1|1|1|1|0|1||restaurant|2020-09-03
- Cojote  Cafe | Schleifmühleweg  95 |3.60|3.40|https://coyote.de/filialen/tuebingen/| 97  55  892 |1|1|2|1|2|1|1||restaurant|2020-09-04
-Ammerschlag| Ammergasse  13 |3.20|2.80|https://www.facebook.com/pg/Ammerschlag-105152256254807/about/?ref=page_internal|51591|0|1|0|0|0|1|0||bar|2020-09-04
-Storchen| Ammergasse  3 |3.20|3.10|https://www.tuepedia.de/wiki/Storchen|52210|0|1|0|1|0|1|1||bar|2020-09-04
- Schmidts  Katze | Ammergasse  12 |3.20|3.90|https://www.tuebingen-info.de/de/gastronomie/schmitz-katze-7f0dcca0e7|8594896|0|1|0|1|0|0|1||bar|2020-09-04
- Alter  Simpl | Haaggasse  24 |3.20|3.40|https://www.tuepedia.de/wiki/Alter_Simpl|52677|0|1|0|1|0|1|0||bar|2020-09-04
-Atrium| Haaggasse  10 |3.80|4.20|https://www.facebook.com/CafeAtriumTuebingen/|8597070|1|1|0|1|1|1|1||bar|2020-09-04
- Chez  Michel | Marktgasse  7 |0.00|4.20|https://de-de.facebook.com/pages/category/Pub/Chez-Michel-1426783987537294/| 0176  61782909 |0|1|0|1|0|0|1||bar|2020-09-04
-Marktschenke| Am  Markt  11 |3.90|4.80|https://www.marktschenke-tuebingen.de/|22035|1|1|2|0|1|0|1||bar|2020-09-04
-Bartista| Kirchgasse  19 |0.00|0.00|https://bartista.de/|9898919|0|1|0|1|0|0|1||bar|2020-09-04
-Asmara| Kirchgasse  6 |0.00|3.10|https://www.asmara-bar.de/|256286|0|1|1|1|0|1|0||bar|2020-09-04
-Collegium| Lange  Gasse  8 |3.60|0.00|https://collegium-tuebingen.de/|9208148|1|1|0|1|2|0|1||bar|2020-09-04
-Stadtpost| Neue  Straße  9 |3.40|3.60|https://de-de.facebook.com/stadtpost/|6391775|1|1|0|1|0|0|1||bar|2020-09-04
- Ribingurumu  (Wohnzimmer) | Mühlstraße  20 |3.50|0.00|https://de-de.facebook.com/Ribingurumu/||0|1|0|1|0|1|0||bar|2020-09-04
- Last  Resort | Mühlstraße  20 |4.30|3.70|https://de-de.facebook.com/pages/category/Dive-Bar/Last-Resort-158790172857/|5651087|0|1|0|1|0|1|1||bar|2020-09-04
+ Cojote  Cafe | Schleifmühleweg  95 |3.60|3.40|https://coyote.de/filialen/tuebingen/|07071/9755892|1|1|2|1|2|1|1||restaurant|2020-10-08
+Ammerschlag| Ammergasse  13 |3.20|2.80|https://fb.com/pg/Ammerschlag-105152256254807/about/|07071/51591|0|1|0|0|0|1|0||bar|2020-10-08
+Storchen| Ammergasse  3 |3.20|3.10|https://www.tuepedia.de/wiki/Storchen|07071/52210|0|1|0|1|0|1|1||bar|2020-10-08
+ Schmidts  Katze | Ammergasse  12 |3.20|3.90|https://www.tuebingen-info.de/de/gastronomie/schmitz-katze-7f0dcca0e7|07071/8594896|0|1|0|1|0|0|1| Wer  hunger  hat  darf  sein  eigenes  Essen  mitbringen |bar|2020-10-08
+ Alter  Simpl | Haaggasse  24 |3.20|3.40|https://www.tuepedia.de/wiki/Alter_Simpl|07071/52677|0|1|0|1|0|1|0| Eine  alte  urige  Kneipe. |bar|2020-10-08
+Atrium| Haaggasse  10 |3.80|4.20|https://fb.com/CafeAtriumTuebingen/|07071/8597070|1|1|0|1|1|1|1||bar|2020-10-08
+ Chez  Michel | Marktgasse  7 |0.00|4.20|https://fb.com/pages/category/Pub/Chez-Michel-1426783987537294/about/|0176/61782909|0|1|0|1|0|0|1||bar|2020-10-08
+Marktschenke| Am  Markt  11 |3.90|4.80|https://www.marktschenke-tuebingen.de/|07071/22035|1|1|2|0|1|0|1||bar|2020-10-08
+Bartista| Kirchgasse  19 |0.00|0.00|https://bartista.de/|07071/9898919|0|1|0|1|0|0|1| Eine  der  edleren  Cocktailbars  für  die  es  sich  lohnt  ein  Hemd  anzuziehen.  Ein  normaler  Cocktail  kostet  um  die  10€. |bar|2020-10-08
+Asmara| Kirchgasse  6 |0.00|3.10|https://www.asmara-bar.de/|07071/256286|0|1|1|1|0|1|0| Das  Asmara  ist  eine  große  Kellerbar  mit  einem  großen  Gewölbe.  Es  ist  geeignet  für  größere  Gruppen  und  bietet  eine  Vielzahl  bezahlbarer  Cocktails  an. |bar|2020-10-08
+Collegium| Lange  Gasse  8 |3.60|0.00|https://collegium-tuebingen.de/|9208148|1|1|0|1|2|0|1| Das  Collegium,  auch  Colle  gennant,  liegt  nicht  in  der  Collegiumsgasse.  Es  vereint  Bar,  Cafe  und  Restaurant  und  bietet  einen  Mittagstisch  an. |bar|2020-10-08
+Stadtpost| Neue  Straße  9 |3.40|3.60|https://fb.com/stadtpost/|07071/6391775|1|1|0|1|0|0|1| Kleines  Restaurant  /  Kneipe  mit  guten  Burgern  und  leckeren  Pommes |bar|2020-10-08
+ Ribingurumu  (Wohnzimmer) | Mühlstraße  20 |3.50|0.00|https://fb.com/Ribingurumu/||0|1|0|1|0|1|0| [jap.:  Wohnzimmer]  Nette  Bar  mit  bequemen  Sesseln  auf  denen  man  das  Treiben  Tübingens  beobachteten  kann. |bar|2020-10-08
+ Last  Resort | Mühlstraße  20 |4.30|3.70|https://fb.com/pages/category/Dive-Bar/Last-Resort-158790172857/|07071/5651087|0|1|0|1|0|1|1| Kellerkneipe  die  sehr  lange  noch  offen  hat  und  die  besten  Mexikaner  der  Stadt  anbietet. |bar|2020-10-08
+ Das  Jäger | Hafengasse  8 |3.80|3.60|https://dasjaeger.de| 07071  /  6890266 |1|1|1|1|0|0|1||restaurant|2020-10-02
