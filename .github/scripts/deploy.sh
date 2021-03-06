@@ -25,7 +25,7 @@ cat <<EOF > build-information
 Commit: $TRAVIS_COMMIT
 Source date: $(date --date=@$(git log -1 --pretty=%ct) +%F)
 Build date: $(date --utc +'%F')
-Nixpkgs commit: $(cat ~/.nix-defexpr/channels/nixpkgs/.git-revision)
+Nixpkgs commit: $NIXPKGS_COMMIT
 EOF
 cat <<EOF > sftp-commands
 put result/*
