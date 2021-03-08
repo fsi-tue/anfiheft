@@ -19,4 +19,5 @@ jobs:
           TRAVIS_COMMIT: ${{ github.sha }}
         run: |
           export NIXPKGS_COMMIT=$(curl -L "https://channels.nixos.org/nixos-unstable/git-revision")
+          .github/scripts/gen-buildinfo.sh
           .github/scripts/deploy.sh
