@@ -23,8 +23,10 @@ echo ${KNOWN_HOSTS} | base64 -d >> ~/.ssh/known_hosts
 echo "${SSH_KEY}" | base64 -d >> /tmp/id_rsa
 
 cat <<EOF > sftp-commands
-put result/*
-put .BUILDINFO
+ls -al
+-rm *
+put anfiheft/*
+chmod 644 *
 EOF
 
 sftp -i /tmp/id_rsa -b sftp-commands "${SFTP_USER}@${HOST}:${TARGET_DIRECTORY}"
