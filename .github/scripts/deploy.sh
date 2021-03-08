@@ -21,15 +21,11 @@ YXlkTXlmbgo="
 mkdir -p ~/.ssh
 echo ${KNOWN_HOSTS} | base64 -d >> ~/.ssh/known_hosts
 echo "${SSH_KEY}" | base64 -d >> /tmp/id_rsa
-cat <<EOF > build-information
-Commit: $TRAVIS_COMMIT
-Source date: $(date --date=@$(git log -1 --pretty=%ct) +%F)
-Build date: $(date --utc +'%F')
-Nixpkgs commit: $NIXPKGS_COMMIT
-EOF
+
 cat <<EOF > sftp-commands
 put result/*
-put build-information
+put .BUILDINFO
 EOF
+
 sftp -i /tmp/id_rsa -b sftp-commands "${SFTP_USER}@${HOST}:${TARGET_DIRECTORY}"
 rm /tmp/id_rsa
