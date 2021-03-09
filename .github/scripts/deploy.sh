@@ -26,6 +26,7 @@ cat <<EOF > sftp-commands
 ls -al
 -rm *
 put anfiheft/*
+put anfiheft/.BUILDINFO
 chmod 644 *
 EOF
 
