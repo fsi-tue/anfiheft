@@ -1,7 +1,8 @@
 { nixpkgs ? <nixpkgs>
-# Run "nix-build --argstr date YYYY-MM-DD" to reproduce a build:
-, date ? null
 , doCheck ? true
+# To reproduce a build via .github/scripts/reproduce.py:
+, date ? null
+, srcUrl ? null
 }:
 
 with import nixpkgs {};
@@ -13,7 +14,9 @@ stdenv.mkDerivation rec {
     else lib.fileContents
       (runCommand "anfiheft-date" {} "date --utc +'%F' > $out");
 
-  src = lib.cleanSource ./.;
+  src = if srcUrl != null
+    then fetchTarball srcUrl
+    else lib.cleanSource ./.;
 
   inherit doCheck;
 
