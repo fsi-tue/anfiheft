@@ -6,10 +6,8 @@ jobs:
     steps:
       - name: Checkout the source-code
         uses: actions/checkout@v2
-      - name: Setup (Nixpkgs config and NIXPKGS_COMMIT)
-        run: |
-          .github/scripts/setup.sh
-          echo "NIXPKGS_COMMIT=$(curl -L 'https://channels.nixos.org/nixos-unstable/git-revision')" >> $GITHUB_ENV
+      - name: Setup (NIXPKGS_COMMIT)
+        run: echo "NIXPKGS_COMMIT=$(curl -L 'https://channels.nixos.org/nixos-unstable/git-revision')" >> $GITHUB_ENV
       - name: Install Nix
         uses: cachix/install-nix-action@v12
         with:
@@ -17,7 +15,7 @@ jobs:
       - name: Build the Anfiheft
         run: |
           .github/scripts/gen-buildinfo.sh
-          nix-build --argstr date "$(date --date=@$(git log -1 --pretty=%ct) +%F)" --arg doCheck true
+          nix-build --argstr date "$(date --date=@$(git log -1 --pretty=%ct) +%F)"
           mkdir anfiheft && cp result/* .BUILDINFO anfiheft/
       - name: Upload the Anfiheft (GitHub artifacts)
         uses: actions/upload-artifact@v2

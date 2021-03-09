@@ -1,7 +1,7 @@
 { nixpkgs ? <nixpkgs>
 # Run "nix-build --argstr date YYYY-MM-DD" to reproduce a build:
 , date ? null
-, doCheck ? false # Disabled by default since xpdf must be added to permittedInsecurePackages
+, doCheck ? true
 }:
 
 with import nixpkgs {};
@@ -25,7 +25,8 @@ stdenv.mkDerivation rec {
         hyperref url csvsimple pgf etoolbox fontawesome5 l3kernel l3packages
         hycolor atveryend epstopdf-pkg;
     })
-  ] ++ lib.optional doCheck xpdf;
+  ];
+  checkInputs = [ pdftk ];
 
   postPatch = ''
     # Set SOURCE_DATE_EPOCH to make the build reproducible:
