@@ -69,11 +69,11 @@ kki/dump.csv:
 
 .PHONY: check
 check:
-	# Note: This target requires the pdfinfo binary from Xpdf.
+	# Note: This target requires the pdftk binary from pdftk(-java).
 	set -eu; \
 	FAILURE=0; \
 	for file in anfiheft-info.pdf anfiheft-kogni.pdf; do \
-	  PAGE_COUNT=$$(pdfinfo $$file | grep Pages | grep -oE '[0-9]+$$'); \
+	  PAGE_COUNT=$$(pdftk $$file dump_data | grep NumberOfPages | cut -d' ' -f2); \
 	  REMAINDER=$$((PAGE_COUNT % 4)); \
 	  if [[ $$REMAINDER -ne 0 ]]; then \
 	    echo "Failure: The number of pages in the PDF file $$file" \
