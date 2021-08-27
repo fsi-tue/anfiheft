@@ -22,7 +22,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     (texlive.combine {
-      inherit (texlive) scheme-minimal latexmk latexconfig latex
+      inherit (texlive) scheme-minimal latexmk latexconfig latex latex-bin
         collection-fontsrecommended babel babel-german hyphen-german
         graphics oberdiek tools enumitem qrcode xcolor xkeyval colortbl
         hyperref url csvsimple pgf etoolbox fontawesome5 l3kernel l3packages
