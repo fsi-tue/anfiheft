@@ -29,3 +29,6 @@ result
 *.blg
 *.bak
 *.dvi
+
+# macos stuff...
+.DS_Store
