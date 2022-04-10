@@ -26,13 +26,22 @@ BASEEDITION_KOGNI = 3 # WS 18/19: 3. Auflage
 # automatically set the build parameters like year, semester, edition and if the kogni or info build should be done
 BASE_CONF = '\\jahr=$(YEAR) \\$(SEMESTER)'
 
+# add the git commit short id and date of the revision these PDFs are built from
+GIT_COMMIT_ID =  $(shell if [[ -f .BUILDINFO ]]; \
+		 then echo $(shell grep SOURCE_COMMIT .BUILDINFO | awk -F '"' '{print $$2}' | cut -c1-7); \
+		 else echo $(shell (git rev-parse --short HEAD)); fi)
+GIT_COMMIT_DATE = $(shell if [[ -f .BUILDINFO ]]; \
+		  then echo $(shell grep SOURCE_DATE .BUILDINFO | awk -F '"' '{print $$2}'); \
+		  else echo $(shell (git log -1 --format=%cd --date=format:'%Y-%m-%d')); fi)
+GIT_COMMIT = '\\newcommand{\\gitCommit}{$(GIT_COMMIT_ID) @ $(GIT_COMMIT_DATE)}'
+
 INFO_AUFLAGE = $(shell if [ $(SEMESTER) = "sommersemestertrue" ]; \
 	       then echo $$((($(YEAR)-$(BASEYEAR))*2 + $(BASEEDITION_INFO))); \
 	       else echo $$((($(YEAR)-$(BASEYEAR))*2 + $(BASEEDITION_INFO) + 1)); fi)
-INFO_CONF = '$(BASE_CONF) \auflage=$(INFO_AUFLAGE) \infotrue'
+INFO_CONF = '$(BASE_CONF) \auflage=$(INFO_AUFLAGE) \infotrue $(GIT_COMMIT)'
 
 KOGNI_AUFLAGE = $(shell echo $$(($(YEAR)-$(BASEYEAR) + $(BASEEDITION_KOGNI))))
-KOGNI_CONF  = '$(BASE_CONF) \auflage=$(KOGNI_AUFLAGE)'
+KOGNI_CONF  = '$(BASE_CONF) \auflage=$(KOGNI_AUFLAGE) $(GIT_COMMIT)'
 
 
 # Aliases
