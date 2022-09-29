@@ -125,6 +125,10 @@
 \ifinfo
 	\input{info/erste_woche/einmaleins.tex}
 
+	% TODO: delete in non-corona semester
+	\subsection{Die ersten Wochen} 
+	\input{info/erste_woche/die_ersten_wochen.tex}
+
 \else
 	\input{kogni/erste_woche/einmaleins.tex}
 
@@ -137,14 +141,11 @@
 
 	\pagebreak
 
-% TODO: uncomment in non-corona semester
-%	\subsection{Die ersten Wochen}
-%	\input{kogni/erste_woche/die_ersten_wochen.tex}
+	% TODO: uncomment in non-corona semester
+	\subsection{Die ersten Wochen}
+	\input{kogni/erste_woche/die_ersten_wochen.tex}
 \fi
 
-% TODO: delete in non-corona semester
-\subsection{Die ersten Wochen} 
-\input{info/erste_woche/die_ersten_wochen.tex}
 
 \pagebreak
 
@@ -153,10 +154,10 @@
 
 %******************************************************
 
-%\pagebreak
-\ifinfo
-        \vspace{-1em} % TODO: Remove
-\fi
+\pagebreak
+%\ifinfo
+%        \vspace{-1em} % TODO: Remove
+%\fi
 \section{Die Vorlesungszeit}
 \ifinfo
 	\subsection{Der Stundenplan}
@@ -176,6 +177,9 @@
 \subsection{Das Unikino}
 \input{info/vorlesungszeit/unikino.tex}
 % \pagebreak
+
+\subsection{Die Hochschulpolitik}
+\input{info/vorlesungszeit/hopo.tex}
 
 
 \subsection{Das Fachsprachenzentrum}
@@ -266,6 +270,9 @@
 
 	\subsection{Psychosoziale Beratung}
 	\input{info/hilfe/psycho_beratung.tex}
+\else
+	\subsection{Psychosoziale Beratung}
+	\input{info/hilfe/psycho_beratung.tex}
 \fi
 
 \newpage
@@ -330,12 +337,12 @@
 \pagebreak
 \section*{Platz für Notizen:}
 \ifinfo
-%	\newpage\null\thispagestyle{empty}
-	\newpage\null\thispagestyle{empty}
-	\newpage\null\thispagestyle{empty}
-	\newpage\null\thispagestyle{empty}
+  % \newpage\null\thispagestyle{empty}
+  % \newpage\null\thispagestyle{empty}
+  % \newpage\null\thispagestyle{empty}
+  % \newpage\null\thispagestyle{empty}
 \else
-%	\newpage\null\thispagestyle{empty}
+  % \newpage\null\thispagestyle{empty}
 	\newpage\null\thispagestyle{empty}
 	\newpage\null\thispagestyle{empty}
 \fi
@@ -350,9 +357,12 @@
 	\input{kogni/adressen.tex}
 \fi
 
+% Umschlagrückseite
 \ifinfo
-	% Umschlagrückseite
 	\input{info/keepcalm.tex}
+\else
+	\input{kogni/keepcalm.tex}
 \fi
+
 
 \end{document}
