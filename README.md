@@ -30,6 +30,26 @@ sind! Ansonsten ist 'KEEP CALM AND JOIN THE FACHSCHAFT' nicht auf der letzten
 Seite (auf dem Umschlag) gedruckt. Die Seitenzahl kann mit `make check` geprüft
 werden (erfordert `pdfinfo` von Xpdf).
 
+### Pakete (Stand: Februar 2023)
+- Zum benutzen der Makefile müssen auf allen Distributionen die Pakete `make` und `latexmk` (Ubuntu, auf Archlinux reicht `pdftk`) installiert sein
+
+#### Archlinux und Derivate
+- texlive-bin (automatisch als Abhängigkeit der Unteren)
+- texlive-core (automatisch als Abhängigkeit der Unteren)
+- texlive-latexextra
+- texlive-pictures
+- texlive-fontsextra
+
+#### Ubuntu, Debian und Derivate
+- tex-common (automatisch als Abhängigkeit der Unteren)
+- texlive-base (automatisch als Abhängigkeit der Unteren)
+- texlive-binaries (automatisch als Abhängigkeit der Unteren)
+- texlive-latex-base (automatisch als Abhängigkeit der Unteren)
+- texlive-lang-german
+- texlive-fonts-recommended
+- texlive-latex-extra
+- texlive-fonts-extra
+
 ## Private Subversion history
 
 FSI members can also obtain the private history from Subversion by issuing the
