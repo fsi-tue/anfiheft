@@ -1,6 +1,6 @@
-# fsi-anfiheft
+# fsi-erstiheft
 
-Dies ist der Sourcecode für das Anfängerheft für Studierende im ersten Semester
+Dies ist der Sourcecode für das Erstsemesterheft für Studierende im ersten Semester
 der Informatik, Kognitionswissenschaft, Bioinformatik, Medizininformatik,
 Medieninformatik und Informatik-Lehramt Studiengänge der Universität Tübingen.
 
