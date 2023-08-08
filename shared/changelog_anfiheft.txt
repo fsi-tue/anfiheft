@@ -1,0 +1,39 @@
+Hallo zusammen,
+
+die letzten zwei Wochen habe ich mir mit Marc (und ohne 1 Kasten Bier) die Vor- und Nachmittage um die Ohren geschlagen,
+bin Leuten auf den Sack gegangen, habe über SVN geflucht, meine Tastatur malträtiert und lustig Vektorgrafiken durch die Gegend geschubst.
+Das Ergebnis (selbstverfreilich immer noch WIP, aber die Seitenzahl ist schon mal richtig) findet ihr im Anhang.
+Wer Feedback gibt, kann -falls gewünscht- auf der zweiten Seite als Redaktionsmitglied eingetragen werden.
+Bitte lest den Text weiter unten und lasst ruhig mal ein diff auf frühere Revisionen laufen,
+falls ihr euch fragt warum <hier beliebigen Abschnitt einsetzen> umgeschrieben oder gelöscht wurde. Teilweise stammten die entsprechenden Commits
+von Personen, die selbst ich als (mehr oder weniger) alter Hase nicht mehr kenne (Who the fuck is Bernd Wurst?).
+
+Hier ein kleines Changelog:
+- Haufenweise veralteten Scheiß gestrichen (daher ist die Seitenzahl auch um einiges geringer als sonst)
+- Visuelle Darstellung etwas aufpoliert
+  - Vorderseite inklusive FSI-Logo mal neu gemacht
+  - Ciao Serifen; Hallo sans-serif! (Times war einfach so 1997.)
+- Inhalt teilweise neu strukturiert
+  - Beispielstundenpläne rausgestrichen und auf Brief verwiesen (Brief ist inklusive Master-Version online, cheers an Roman)
+  - Beispielstudienpläne nach neuer PO eingetragen, veraltete Modulbeschreibungen rausgekickt (Cheers an Kay Nieselt)
+- Unikino-Spielplan abgedruckt, weil man den Verein ruhig unterstützen kann und wir damit Werbung für unseren Glühweinausschank machen
+- Beschreibungstexte für Morgenstelle, Sand etc. umgebogen
+- Etwas mehr als nur drei Zeilen zu Eduroam geschrieben, Zertifikate etc. erwähnt, aufs ZDV verwiesen
+- neues Kapitel "Hilfe und Beratung"
+  - Ansprechpartner und Studienberatung aktualisiert (Cheers an Jessi und Tanja)
+- neues Kapitel "Geld"
+- neues Kapitel "Anhang"
+  - Lagepläne von Morgenstelle und Sand (Cheers an Flo1 und Claudia Walter)
+  - Abkürzungsverzeichnis
+  - Stundenplan zum selbst ausfüllen (dann wird das Heft vielleicht nicht nach der ersten Woche weggeschmissen, wie es oft der Fall ist)
+- Kneipenführer vorerst auskommentiert, das Ding muss von Grund auf neu geschrieben werden
+  und dazu habe ich momentan nicht die Zeit. Ich werd ihn vermutlich als PDF online stellen, sobald
+  die Überarbeitung über die Bühne ist. Spätestens in der nächsten Auflage isser dann wieder drin.
+- Desweiteren: Fußnoten! Fußnoten für alle!
+- Auf der Rückseite mal nen QR-Code probiert, man kann sich überlegen, für spätere Auflagen alle Links als QR zu setzen.
+  (Ich weiß, wir sind nicht in Japan und die meisten Seiten sind nicht mobilorientiert, ist ja nur n Vorschlag.)
+
+In diesem Sinne: Come at me, Bro!
+
+Cheers
+Tim && Marc
