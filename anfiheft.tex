@@ -216,6 +216,7 @@
 	\input{kogni/uni/gebaeude.tex}
 \fi
 
+\pagebreak
 \subsection{Was ist wo?}
 \ifinfo
 	\input{info/uni/infrastruktur.tex}
@@ -238,7 +239,7 @@
 
 \subsection{Sehenswürdigkeiten}
 \input{shared/tuebingen/sehenswuerdigkeiten.tex}
-\pagebreak
+
 \subsection{Freizeitgestaltung}
 \input{shared/tuebingen/freizeitgestaltung.tex}
 
@@ -340,7 +341,7 @@
   % \newpage\null\thispagestyle{empty}
   % \newpage\null\thispagestyle{empty}
 \else
-  % \newpage\null\thispagestyle{empty}
+  \newpage\null\thispagestyle{empty}
 	\newpage\null\thispagestyle{empty}
 	\newpage\null\thispagestyle{empty}
 \fi
@@ -357,6 +358,7 @@
 
 % Umschlagrückseite
 \ifinfo
+	\pagebreak
 	\input{info/keepcalm.tex}
 \else
 	\input{kogni/keepcalm.tex}
