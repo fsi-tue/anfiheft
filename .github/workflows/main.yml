@@ -23,7 +23,7 @@ jobs:
           name: anfiheft
           path: anfiheft/
       - name: Deploy the Anfiheft
-        if: ${{ github.repository_owner == 'fsi-tue' && github.ref == 'refs/heads/master' }}
+        if: ${{ github.repository_owner == 'fsi-tue' && github.ref == 'refs/heads/main' }}
         env:
           SSH_KEY: ${{ secrets.SSH_KEY }}
         run: .github/scripts/deploy.sh
