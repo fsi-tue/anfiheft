@@ -133,13 +133,13 @@
 	\input{kogni/erste_woche/einmaleins.tex}
 
 
-	\subsection{Was erwartet euch?}
-	\input{kogni/erste_woche/was-erwartet-euch.tex}
+	%\subsection{Was erwartet euch?}
+	%\input{kogni/erste_woche/was-erwartet-euch.tex}
 
-	\subsection{Die zukünftigen Semester}
-	\input{kogni/erste_woche/zukunft.tex}
+	%\subsection{Die zukünftigen Semester}
+	%\input{kogni/erste_woche/zukunft.tex}
 
-	\pagebreak
+	%\pagebreak
 
 	% TODO: uncomment in non-corona semester
 	\subsection{Die ersten Wochen}
@@ -168,24 +168,8 @@
 	\input{kogni/vorlesungszeit/vph.tex}
 \fi
 
-\subsection{Die Mensen}
-\input{shared/vorlesungszeit/mensen.tex}
-
-\subsection{Der Hochschulsport}
-\input{shared/vorlesungszeit/hochschulsport.tex}
-
-\subsection{Das Unikino}
-\input{shared/vorlesungszeit/unikino.tex}
-% \pagebreak
-
-\subsection{Die Hochschulpolitik}
-\input{shared/vorlesungszeit/hopo.tex}
-
-
-\subsection{Das Fachsprachenzentrum}
-\input{shared/vorlesungszeit/fachsprachenzentrum.tex}
-
 \pagebreak
+
 \section{Die vorlesungsfreie Zeit}
 \subsection{Die Klausuren}
 \ifinfo
@@ -208,7 +192,10 @@
 
 \pagebreak
 
-\section{Universität und Institute}
+\section{Infrastruktur}
+\subsection{Die Mensen}
+\input{shared/vorlesungszeit/mensen.tex}
+
 \subsection{Teile der Universität}
 \ifinfo
 	\input{info/uni/gebaeude.tex}
@@ -217,6 +204,7 @@
 \fi
 
 \pagebreak
+
 \subsection{Was ist wo?}
 \ifinfo
 	\input{info/uni/infrastruktur.tex}
@@ -224,24 +212,56 @@
 	\input{kogni/uni/infrastruktur.tex}
 \fi
 
-\pagebreak
+\newpage
+\subsection{Lagepläne}
+\ifinfo
+	\input{info/anhang/lageplaene.tex}
+\else
+	\input{kogni/anhang/lageplaene.tex}
+\fi
+\newpage
+
 \subsection{PCs, Mail etc.}
 	\input{shared/infra/zdv.tex}
 \subsection{WLAN-Zugang mit eduroam}
 	\input{shared/infra/eduroam.tex}
 
-\section{Tübingen - mehr als eine Universität}
-\subsection{Wohnen}
-\input{shared/tuebingen/wohnen.tex}
 
-\subsection{Verkehr}
-\input{shared/tuebingen/verkehr.tex}
+\section{Freizeit}
 
-\subsection{Sehenswürdigkeiten}
-\input{shared/tuebingen/sehenswuerdigkeiten.tex}
+\subsection{Der Hochschulsport}
+\input{shared/vorlesungszeit/hochschulsport.tex}
 
+\subsection{Das Unikino}
+\input{shared/vorlesungszeit/unikino.tex}
+% \pagebreak
+
+\subsection{Die Hochschulpolitik}
+\input{shared/vorlesungszeit/hopo.tex}
+
+
+\subsection{Das Fremdsprachenzentrum}
+\input{shared/vorlesungszeit/fachsprachenzentrum.tex}
+
+\newpage
 \subsection{Freizeitgestaltung}
 \input{shared/tuebingen/freizeitgestaltung.tex}
+
+
+%\pagebreak
+
+%\section{Tübingen - mehr als eine Universität}
+%\subsection{Wohnen}
+%\input{shared/tuebingen/wohnen.tex}
+
+%\subsection{Verkehr}
+%\input{shared/tuebingen/verkehr.tex}
+
+\ifinfo
+\newpage
+\subsection{Sehenswürdigkeiten}
+\input{shared/tuebingen/sehenswuerdigkeiten.tex}
+\fi
 
 \newpage
 \section{Hilfe und Beratung}
@@ -252,12 +272,12 @@
 	\input{kogni/hilfe/hilfe.tex}
 \fi
 
-\subsection{Mailinglisten}
-\ifinfo
-	\input{info/hilfe/mailinglisten.tex}
-\else
-	\input{kogni/hilfe/mailinglisten.tex}
-\fi
+%\subsection{Mailinglisten}
+%\ifinfo
+%	\input{info/hilfe/mailinglisten.tex}
+%\else
+%	\input{kogni/hilfe/mailinglisten.tex}
+%\fi
 
 \ifinfo
 	\subsection{Ansprechpartner nach Studiengängen}
@@ -266,86 +286,77 @@
 	\subsection{Prüfungssekretariate}
 	\input{info/hilfe/pruefungsskretariate.tex}
 
-	\subsection{Studierendensekretariat}
-	\input{info/hilfe/studierendensekretariat.tex}
+	%\subsection{Studierendensekretariat}
+	%\input{info/hilfe/studierendensekretariat.tex}
 \fi
 \subsection{Psychosoziale Beratung}
 \input{shared/hilfe/psycho_beratung.tex}
 
 
 
-\newpage
-\section{Geld}
+%\newpage
+%\section{Geld}
 
-\subsection{BaföG}
-\input{shared/geld/bafoeg.tex}
+%\subsection{BaföG}
+%\input{shared/geld/bafoeg.tex}
 
-\subsection{Stipendien}
-\input{shared/geld/stipendien.tex}
+%\subsection{Stipendien}
+%\input{shared/geld/stipendien.tex}
 
-\subsection{Nebenjobs}
-\input{shared/geld/job.tex}
+%\subsection{Nebenjobs}
+%\input{shared/geld/job.tex}
 
-\ifinfo
-	\newpage
-\fi
+%\ifinfo
+%	\newpage
+%\fi
 
-\section{Ausland}
-\input{shared/ausland/ausland.tex}
+%\section{Ausland}
+%\input{shared/ausland/ausland.tex}
 
-\newpage
+%\newpage
 %\twocolumn
 %\section{Kneipenverzeichnis}
 %\input{tuebingen/kneipen.tex}
 %\onecolumn
 
-\section{Lagepläne}
-\ifinfo
-	\input{info/anhang/lageplaene.tex}
-\else
-	\input{kogni/anhang/lageplaene.tex}
-\fi
-\newpage
-
-
 %\pagebreak
-\section*{Verz. wicht. Abk.}
-\input{shared/anhang/abk.tex}
-\ifinfo
-	\pagebreak
-\fi
+%\section*{Verz. wicht. Abk.}
+%\input{shared/anhang/abk.tex}
+%\ifinfo
+%	\pagebreak
+%\fi
 
 
 
 %%
 % KKI
 %%
-\input{kki/kki.tex}
-\addcontentsline{toc}{section}{Kneipen und Kulturinterface}
+%\input{kki/kki.tex}
+%\addcontentsline{toc}{section}{Kneipen und Kulturinterface}
 
 
 % Placeholder-Seite für Seitenzahl
 
 %\pagebreak
-\addcontentsline{toc}{section}{Stundenplan zum selbst ausfüllen}
-\begin{center}
-	\begin{sidewaysfigure}
-		\input{shared/anhang/stundenplan.tex}
-	\end{sidewaysfigure}
-\end{center}
-\pagebreak
-\section*{Platz für Notizen:}
-\ifinfo
+%\addcontentsline{toc}{section}{Stundenplan zum selbst ausfüllen}
+%\begin{center}
+%	\begin{sidewaysfigure}
+%		\input{shared/anhang/stundenplan.tex}
+%	\end{sidewaysfigure}
+%\end{center}
+%\pagebreak
+%\section*{Platz für Notizen:}
+%\ifinfo
   % \newpage\null\thispagestyle{empty}
   % \newpage\null\thispagestyle{empty}
   % \newpage\null\thispagestyle{empty}
   % \newpage\null\thispagestyle{empty}
-\else
-  \newpage\null\thispagestyle{empty}
-	\newpage\null\thispagestyle{empty}
-	\newpage\null\thispagestyle{empty}
-\fi
-\newpage
+%\else
+%  \newpage\null\thispagestyle{empty}
+%	\newpage\null\thispagestyle{empty}
+%	\newpage\null\thispagestyle{empty}
+%\fi
+%\newpage
 
 \addcontentsline{toc}{section}{Adressen \& Telefonnummern}
 \ifinfo
