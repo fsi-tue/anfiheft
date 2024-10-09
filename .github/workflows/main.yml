@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the source-code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Setup (NIXPKGS_COMMIT)
         run: echo "NIXPKGS_COMMIT=$(curl -L 'https://channels.nixos.org/nixos-unstable/git-revision')" >> $GITHUB_ENV
       - name: Install Nix
@@ -18,7 +18,7 @@ jobs:
           nix-build --argstr date "$(date --date=@$(git log -1 --pretty=%ct) +%F)"
           mkdir anfiheft && cp result/* .BUILDINFO anfiheft/
       - name: Upload the Anfiheft (GitHub artifacts)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: anfiheft
           path: anfiheft/
