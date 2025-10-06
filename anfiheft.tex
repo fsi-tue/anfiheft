@@ -126,7 +126,7 @@
 	\input{info/erste_woche/einmaleins.tex}
 
 	% TODO: delete in non-corona semester
-	\subsection{Die ersten Wochen} 
+	\subsection{Die ersten Wochen}
 	\input{info/erste_woche/die_ersten_wochen.tex}
 
 \else
@@ -222,9 +222,9 @@
 \newpage
 
 \subsection{PCs, Mail etc.}
-	\input{shared/infra/zdv.tex}
+\input{shared/infra/zdv.tex}
 \subsection{WLAN-Zugang mit eduroam}
-	\input{shared/infra/eduroam.tex}
+\input{shared/infra/eduroam.tex}
 
 
 \section{Freizeit}
@@ -258,9 +258,9 @@
 %\input{shared/tuebingen/verkehr.tex}
 
 \ifinfo
-\newpage
-\subsection{Sehenswürdigkeiten}
-\input{shared/tuebingen/sehenswuerdigkeiten.tex}
+	\newpage
+	\subsection{Sehenswürdigkeiten}
+	\input{shared/tuebingen/sehenswuerdigkeiten.tex}
 \fi
 
 \newpage
@@ -344,19 +344,21 @@
 %		\input{shared/anhang/stundenplan.tex}
 %	\end{sidewaysfigure}
 %\end{center}
-%\pagebreak
-%\section*{Platz für Notizen:}
-%\ifinfo
-  % \newpage\null\thispagestyle{empty}
-  % \newpage\null\thispagestyle{empty}
-  % \newpage\null\thispagestyle{empty}
-  % \newpage\null\thispagestyle{empty}
-%\else
-%  \newpage\null\thispagestyle{empty}
-%	\newpage\null\thispagestyle{empty}
-%	\newpage\null\thispagestyle{empty}
-%\fi
-%\newpage
+\ifinfo
+	\pagebreak
+	\section*{Platz für Notizen:}
+	% \newpage\null\thispagestyle{empty}
+	% \newpage\null\thispagestyle{empty}
+	\newpage\null\thispagestyle{empty}
+	\newpage\null\thispagestyle{empty}
+\else
+	% \pagebreak
+	% \section*{Platz für Notizen:}
+	%\newpage\null\thispagestyle{empty}
+	%\newpage\null\thispagestyle{empty}
+	%\newpage\null\thispagestyle{empty}
+\fi
+\newpage
 
 \addcontentsline{toc}{section}{Adressen \& Telefonnummern}
 \ifinfo

@@ -7,8 +7,8 @@
 \newcommand{\dtickettuebingenpreis}{\EUR{45,00}} % https://www.naldo.de/tickets/deutschlandticket-tuebingen/
 
 \ifinfo
-\newcommand{\Matheprof}{Prof. Eckstein}
-\newcommand{\Infoprof}{Prof. Lensch}
+	\newcommand{\Matheprof}{Prof. Martius}
+	\newcommand{\Infoprof}{Prof. Ostermann}
 
 	% Studienberatung
 	\newcommand{\studBeratungInfo}{Louisa Lambrecht \& Prof. Menth}
@@ -17,13 +17,13 @@
 	\newcommand{\studBeratungMedizin}{Prof. Walter \& Prof. Pfeifer}
 	\newcommand{\studBeratungLehramt}{Laura Herb \& Prof. Ostermann}
 	\newcommand{\studBeratungKogni}{Dr. Elisabeth Hein \& Dr. Verena Seibold}
-	 \newcommand{\studBeratung}{Clara Eiglsperger}
+	\newcommand{\studBeratung}{Clara Eiglsperger}
 
 
-\newcommand{\Studiendekan}{Prof. Hennig}
-\newcommand{\PAVorsitz}{Prof. Menth}
+	\newcommand{\Studiendekan}{Prof. Hennig}
+	\newcommand{\PAVorsitz}{Prof. Menth}
 \else
-\newcommand{\studBeratung}{Lukas Sodan \& Marie Hartung}
+	\newcommand{\studBeratung}{Lukas Sodan \& Marie Hartung}
 	\newcommand{\studBeratungTwolines}{Lukas Sodan und \newline Marie Hartung}
 	% \newcommand{\kognimentoren}{Lukas Sodan \& Anne Schlecht}
 	% \newcommand{\kognimentorenTwolines}{Lukas Sodan und \newline Anne Schlecht}
@@ -43,7 +43,7 @@
 			\begin{minipage}{0.8\linewidth}
 				\textbf{#2} \\ #1
 			\end{minipage}
-	}}}
+		}}}
 
 % big
 \newcommand{\linkbig}[3]{
@@ -53,7 +53,7 @@
 			\qrcode{#1} \\
 			\vspace*{2mm}
 			\textbf{#2} \\ #1
-	}}
+		}}
 	\hfill
 	\parbox{0.5\linewidth}{
 		#3
@@ -63,24 +63,24 @@
 % ========= Corona Disclaimer ===========
 % Disclaimer with desciption parameter
 \newcommand{\coronabox}[1]{
-    \noindent
-    \colorbox{orange!10}{
-        \parbox{\linewidth}{
-            \begin{minipage}{.15\linewidth}
-                \centering
-                \color{red}\Huge\faIcon{biohazard}
-            \end{minipage}\begin{minipage}{.85\linewidth}
-                \vspace*{3mm}
-                \textbf{Corona Disclaimer}\\
-                #1
-                \vspace*{3mm}
-            \end{minipage}
-}}}
+	\noindent
+	\colorbox{orange!10}{
+		\parbox{\linewidth}{
+			\begin{minipage}{.15\linewidth}
+				\centering
+				\color{red}\Huge\faIcon{biohazard}
+			\end{minipage}\begin{minipage}{.85\linewidth}
+				\vspace*{3mm}
+				\textbf{Corona Disclaimer}\\
+				#1
+				\vspace*{3mm}
+			\end{minipage}
+		}}}
 
 % Generic Disclaimer
 % The text below is not final. Feel free to find something more suitable
 \newcommand{\corona}{\coronabox{
-Wie bei allem lässt sich hier nichts definitiv sagen. Bitte informiere dich \\
-direkt bei der betreffenden Stelle.
-}}
+		Wie bei allem lässt sich hier nichts definitiv sagen. Bitte informiere dich \\
+		direkt bei der betreffenden Stelle.
+	}}
 
