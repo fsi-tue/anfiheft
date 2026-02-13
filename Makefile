@@ -98,8 +98,8 @@ check:
 
 .PHONY: clean
 clean:
-	if [ -d $(BUILDDIR)-info ]; then rm --recursive ./$(BUILDDIR)-info; fi
-	if [ -d $(BUILDDIR)-kogni ]; then rm --recursive ./$(BUILDDIR)-kogni; fi
+	if [ -d $(BUILDDIR)-info ]; then rm -r ./$(BUILDDIR)-info; fi
+	if [ -d $(BUILDDIR)-kogni ]; then rm -r ./$(BUILDDIR)-kogni; fi
 	rm -f info-$(CONFIG)
 	rm -f kogni-$(CONFIG)
 
